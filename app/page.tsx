@@ -1,7 +1,7 @@
 
 
 "use client";
-import ServiceCard from "../components/ServiceCard";
+
 import Header from "./components/Header";
 import Services from "./components/Services";
 import About from "./components/About";
@@ -20,6 +20,5 @@ export default function Home() {
     </main>
   );
 }
-
 
 
