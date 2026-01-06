@@ -1,4 +1,55 @@
 export default function Services() {
+  const services = [
+    {
+      icon: "⚙️",
+      title: "Automação Inteligente",
+      desc: "Automação de processos com IA para reduzir custos e aumentar eficiência.",
+      slug: "automacao",
+    },
+    {
+      icon: "🤖",
+      title: "Inteligência Artificial",
+      desc: "Modelos de IA, chatbots e previsões inteligentes para seu negócio.",
+      slug: "inteligencia-artificial",
+    },
+    {
+      icon: "📊",
+      title: "Análise de Dados",
+      desc: "Transformamos dados brutos em insights estratégicos.",
+      slug: "analise-de-dados",
+    },
+    {
+      icon: "🧩",
+      title: "Soluções Personalizadas",
+      desc: "Sistemas sob medida alinhados às necessidades do seu negócio.",
+      slug: "solucoes-personalizadas",
+    },
+    {
+      icon: "🎨",
+      title: "Criação de Logomarca",
+      desc: "Identidade visual profissional, única e alinhada à sua marca.",
+      slug: "logomarca",
+    },
+    {
+      icon: "🖼️",
+      title: "Criação de Banner",
+      desc: "Banners modernos e impactantes para redes sociais e campanhas.",
+      slug: "banner",
+    },
+    {
+      icon: "📄",
+      title: "Criação de Flyer",
+      desc: "Flyers criativos e profissionais para divulgação e promoções.",
+      slug: "flyer",
+    },
+    {
+      icon: "🌐",
+      title: "Sites e Landing Pages",
+      desc: "Sites rápidos, responsivos e focados em conversão.",
+      slug: "sites",
+    },
+  ];
+
   return (
     <section className="reveal" aria-label="Nossas Soluções">
       <h2>Nossas Soluções</h2>
@@ -7,61 +58,20 @@ export default function Services() {
       </p>
 
       <div className="cards">
-        <div className="card reveal">
-          <div className="icon">⚙️</div>
-          <h3>Automação Inteligente</h3>
-          <p>Automação de processos com IA para reduzir custos e aumentar eficiência.</p>
-          <a href="#contato" className="card-btn">Solicitar orçamento</a>
-        </div>
+        {services.map((service) => (
+          <div className="card reveal" key={service.slug}>
+            <div className="icon">{service.icon}</div>
+            <h3>{service.title}</h3>
+            <p>{service.desc}</p>
 
-        <div className="card reveal">
-          <div className="icon">🤖</div>
-          <h3>Inteligência Artificial</h3>
-          <p>Modelos de IA, chatbots e previsões inteligentes para seu negócio.</p>
-          <a href="#contato" className="card-btn">Solicitar orçamento</a>
-        </div>
-
-        <div className="card reveal">
-          <div className="icon">📊</div>
-          <h3>Análise de Dados</h3>
-          <p>Transformamos dados brutos em insights estratégicos.</p>
-          <a href="#contato" className="card-btn">Solicitar orçamento</a>
-        </div>
-
-        <div className="card reveal">
-          <div className="icon">🧩</div>
-          <h3>Soluções Personalizadas</h3>
-          <p>Sistemas sob medida alinhados às necessidades do seu negócio.</p>
-          <a href="#contato" className="card-btn">Solicitar orçamento</a>
-        </div>
-
-        <div className="card reveal">
-          <div className="icon">🎨</div>
-          <h3>Criação de Logomarca</h3>
-          <p>Identidade visual profissional, única e alinhada à sua marca.</p>
-          <a href="#contato" className="card-btn">Solicitar orçamento</a>
-        </div>
-
-        <div className="card reveal">
-          <div className="icon">🖼️</div>
-          <h3>Criação de Banner</h3>
-          <p>Banners modernos e impactantes para redes sociais e campanhas.</p>
-          <a href="#contato" className="card-btn">Solicitar orçamento</a>
-        </div>
-
-        <div className="card reveal">
-          <div className="icon">📄</div>
-          <h3>Criação de Flyer</h3>
-          <p>Flyers criativos e profissionais para divulgação e promoções.</p>
-          <a href="#contato" className="card-btn">Solicitar orçamento</a>
-        </div>
-
-        <div className="card reveal">
-          <div className="icon">🌐</div>
-          <h3>Sites e Landing Pages</h3>
-          <p>Sites rápidos, responsivos e focados em conversão.</p>
-          <a href="#contato" className="card-btn">Solicitar orçamento</a>
-        </div>
+            <a
+              href={`/servicos/${service.slug}`}
+              className="card-btn"
+            >
+              Ver detalhes
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   );
