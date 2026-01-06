@@ -1,55 +1,6 @@
-export default function Services() {
-  const services = [
-    {
-      icon: "⚙️",
-      title: "Automação Inteligente",
-      desc: "Automação de processos com IA para reduzir custos e aumentar eficiência.",
-      slug: "automacao",
-    },
-    {
-      icon: "🤖",
-      title: "Inteligência Artificial",
-      desc: "Modelos de IA, chatbots e previsões inteligentes para seu negócio.",
-      slug: "inteligencia-artificial",
-    },
-    {
-      icon: "📊",
-      title: "Análise de Dados",
-      desc: "Transformamos dados brutos em insights estratégicos.",
-      slug: "analise-de-dados",
-    },
-    {
-      icon: "🧩",
-      title: "Soluções Personalizadas",
-      desc: "Sistemas sob medida alinhados às necessidades do seu negócio.",
-      slug: "solucoes-personalizadas",
-    },
-    {
-      icon: "🎨",
-      title: "Criação de Logomarca",
-      desc: "Identidade visual profissional, única e alinhada à sua marca.",
-      slug: "logomarca",
-    },
-    {
-      icon: "🖼️",
-      title: "Criação de Banner",
-      desc: "Banners modernos e impactantes para redes sociais e campanhas.",
-      slug: "banner",
-    },
-    {
-      icon: "📄",
-      title: "Criação de Flyer",
-      desc: "Flyers criativos e profissionais para divulgação e promoções.",
-      slug: "flyer",
-    },
-    {
-      icon: "🌐",
-      title: "Sites e Landing Pages",
-      desc: "Sites rápidos, responsivos e focados em conversão.",
-      slug: "sites",
-    },
-  ];
+import ServiceCard from "./ServiceCard";
 
+export default function Services() {
   return (
     <section className="reveal" aria-label="Nossas Soluções">
       <h2>Nossas Soluções</h2>
@@ -58,21 +9,63 @@ export default function Services() {
       </p>
 
       <div className="cards">
-        {services.map((service) => (
-          <div className="card reveal" key={service.slug}>
-            <div className="icon">{service.icon}</div>
-            <h3>{service.title}</h3>
-            <p>{service.desc}</p>
+        <ServiceCard
+          icon="⚙️"
+          title="Automação Inteligente"
+          description="Automação de processos com IA para reduzir custos e aumentar eficiência."
+          link="/servicos/automacao"
+        />
 
-            <a
-              href={`/servicos/${service.slug}`}
-              className="card-btn"
-            >
-              Ver detalhes
-            </a>
-          </div>
-        ))}
+        <ServiceCard
+          icon="🤖"
+          title="Inteligência Artificial"
+          description="Modelos de IA, chatbots e previsões inteligentes."
+          link="/servicos/inteligencia-artificial"
+        />
+
+        <ServiceCard
+          icon="📊"
+          title="Análise de Dados"
+          description="Transformamos dados brutos em insights estratégicos."
+          link="/servicos/analise-dados"
+        />
+
+        <ServiceCard
+          icon="🧩"
+          title="Soluções Personalizadas"
+          description="Sistemas sob medida alinhados ao seu negócio."
+          link="/servicos/solucoes-personalizadas"
+        />
+
+        <ServiceCard
+          icon="🎨"
+          title="Criação de Logomarca"
+          description="Identidade visual profissional e estratégica."
+          link="/servicos/logomarca"
+        />
+
+        <ServiceCard
+          icon="🖼️"
+          title="Criação de Banner"
+          description="Banners modernos para redes sociais e campanhas."
+          link="/servicos/banner"
+        />
+
+        <ServiceCard
+          icon="📄"
+          title="Criação de Flyer"
+          description="Flyers criativos para divulgação e promoções."
+          link="/servicos/flyer"
+        />
+
+        <ServiceCard
+          icon="🌐"
+          title="Sites e Landing Pages"
+          description="Sites rápidos, responsivos e focados em conversão."
+          link="/servicos/sites-landing-pages"
+        />
       </div>
     </section>
   );
 }
+
