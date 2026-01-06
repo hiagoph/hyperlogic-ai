@@ -1,32 +1,35 @@
-export const metadata = {
-  title: "Automação Inteligente | HyperLogic AI",
-  description:
-    "Automação inteligente com IA para reduzir custos, aumentar eficiência e escalar processos do seu negócio.",
-};
-
 export default function AutomacaoPage() {
   return (
-    <main className="service-page">
-      <section className="service-hero">
-        <h1>Automação Inteligente</h1>
-        <p>
-          Automatizamos processos com inteligência artificial para aumentar
-          eficiência, reduzir custos e escalar resultados.
-        </p>
-        <a href="/#contato" className="btn">
-          Solicitar orçamento
-        </a>
-      </section>
+    <main style={{ padding: "80px 20px", maxWidth: "900px", margin: "auto" }}>
+      <h1>Automação Inteligente</h1>
 
-      <section className="service-content">
-        <h2>O que entregamos</h2>
-        <ul>
-          <li>✔ Automação de processos operacionais</li>
-          <li>✔ Integração entre sistemas</li>
-          <li>✔ Redução de falhas humanas</li>
-          <li>✔ Escalabilidade e performance</li>
-        </ul>
-      </section>
+      <p style={{ marginTop: "20px", color: "#cbd5e1" }}>
+        Automatizamos processos para reduzir custos, aumentar produtividade
+        e eliminar tarefas repetitivas no seu negócio.
+      </p>
+
+      <ul style={{ marginTop: "30px", color: "#cbd5e1" }}>
+        <li>✔ Automação de processos internos</li>
+        <li>✔ Integração entre sistemas</li>
+        <li>✔ Automação com inteligência artificial</li>
+        <li>✔ Redução de erros humanos</li>
+      </ul>
+
+      <a
+        href="/#contato"
+        style={{
+          display: "inline-block",
+          marginTop: "40px",
+          padding: "14px 32px",
+          background: "#38bdf8",
+          color: "#020617",
+          borderRadius: "30px",
+          fontWeight: "600",
+          textDecoration: "none",
+        }}
+      >
+        Solicitar orçamento
+      </a>
     </main>
   );
 }
