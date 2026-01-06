@@ -191,3 +191,71 @@ footer {
   margin-bottom: 12px;
   color: #cbd5e1;
 }
+
+/* TRANSIÇÃO AO CLICAR NO CARD */
+.card-transition {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-transition:active {
+  transform: scale(0.96);
+}
+
+/* ENTRADA DA PÁGINA DE SERVIÇO */
+.service-enter {
+  animation: pageEnter 0.6s ease forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== LOADING INTELIGENTE ===== */
+
+.loading-container {
+  padding: 80px 20px;
+}
+
+.loading-hero {
+  height: 160px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.loading-content .line {
+  height: 18px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.loading-content .line.short {
+  width: 60%;
+}
+
+/* SHIMMER EFFECT */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #1f1f1f 25%,
+    #2a2a2a 37%,
+    #1f1f1f 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}

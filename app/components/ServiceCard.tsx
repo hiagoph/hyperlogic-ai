@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 interface ServiceCardProps {
   title: string;
   description: string;
@@ -18,9 +20,11 @@ export default function ServiceCard({
       {icon && <div className="icon">{icon}</div>}
       <h3>{title}</h3>
       <p>{description}</p>
-      <a href={link} className="card-btn">
+
+      <Link href={link} className="card-btn card-transition">
         Ver detalhes
-      </a>
+      </Link>
     </div>
   );
 }
+

@@ -27,34 +27,34 @@ export default function Services() {
           icon="📊"
           title="Análise de Dados"
           description="Transformamos dados brutos em insights estratégicos."
-          link="/servicos/analise-dados"
+          link="/servicos/analise-de-dados"
         />
 
         <ServiceCard
           icon="🧩"
           title="Soluções Personalizadas"
-          description="Sistemas sob medida alinhados ao seu negócio."
+          description="Sistemas desenvolvidos sob medida para as necessidades do seu negócio."
           link="/servicos/solucoes-personalizadas"
         />
 
         <ServiceCard
           icon="🎨"
           title="Criação de Logomarca"
-          description="Identidade visual profissional e estratégica."
+          description="Identidade visual profissional, forte e alinhada à sua marca."
           link="/servicos/logomarca"
         />
 
         <ServiceCard
           icon="🖼️"
           title="Criação de Banner"
-          description="Banners modernos para redes sociais e campanhas."
+          description="Banners modernos e impactantes para redes sociais e campanhas."
           link="/servicos/banner"
         />
 
         <ServiceCard
           icon="📄"
           title="Criação de Flyer"
-          description="Flyers criativos para divulgação e promoções."
+          description="Flyers criativos e profissionais para divulgação e promoções."
           link="/servicos/flyer"
         />
 
@@ -62,10 +62,11 @@ export default function Services() {
           icon="🌐"
           title="Sites e Landing Pages"
           description="Sites rápidos, responsivos e focados em conversão."
-          link="/servicos/sites-landing-pages"
+          link="/servicos/sites"
         />
       </div>
     </section>
   );
 }
+
 
