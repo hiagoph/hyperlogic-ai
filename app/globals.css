@@ -303,3 +303,38 @@ footer {
   border-radius: 16px;
   border: 1px solid #1e293b;
 }
+
+.service-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.service-hero-text h1 {
+  margin-bottom: 16px;
+}
+
+.service-hero-text .subtitle {
+  margin-bottom: 24px;
+  color: #cbd5e1;
+}
+
+.service-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 768px) {
+  .service-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .service-image {
+    margin: 0 auto 30px;
+  }
+}

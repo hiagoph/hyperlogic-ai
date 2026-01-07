@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -167,42 +168,30 @@ export default async function ServicePage({
   return (
     <section className="service-page service-enter">
       {/* HERO */}
-      <div className="service-hero">
-        <h1>{service.title}</h1>
-        <p className="subtitle">{service.headline}</p>
+<div className="service-hero">
+  {service.image && (
+  <img
+  src={service.image}
+  alt={service.title}
+  className="service-image"
+/>
+  )}
 
-        {service.image && (
-          <img
-            src={service.image}
-            alt={service.title}
-            className="service-image"
-          />
-        )}
-      </div>
+  <div className="service-hero-text">
+    <h1>{service.title}</h1>
+    <p className="subtitle">{service.headline}</p>
 
-      {/* CONTEÚDO */}
-      <div className="service-content">
-        <p>{service.description}</p>
-
-        <h2>O que oferecemos</h2>
-        <ul>
-          {service.items.map((item, index) => (
-            <li key={index}>✔ {item}</li>
-          ))}
-        </ul>
-
-        {service.cta && (
-          <div style={{ marginTop: 40 }}>
-            <a
-              href="https://wa.me/55SEUNUMEROAQUI"
-              target="_blank"
-              className="card-btn"
-            >
-              {service.cta}
-            </a>
-          </div>
-        )}
-      </div>
+    {service.cta && (
+      <a
+        href="https://wa.me/55SEUNUMEROAQUI"
+        target="_blank"
+        className="card-btn"
+      >
+        {service.cta}
+      </a>
+    )}
+  </div>
+</div>
     </section>
   );
 }
