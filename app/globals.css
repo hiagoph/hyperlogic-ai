@@ -47,18 +47,24 @@ section p.subtitle {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  gap: 24px;
 }
 
 .card {
-  background: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 16px;
-  padding: 30px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  justify-content: space-between;
+
+  padding: 24px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  height: auto;              /* 👈 NUNCA altura fixa */
+  min-height: 100%;          /* garante crescimento */
 }
+
 
 .card:hover {
   transform: translateY(-8px);
@@ -83,20 +89,32 @@ section p.subtitle {
 
 /* BOTÃO */
 .card-btn {
-  margin-top: auto; /* 👈 ISSO ALINHA TODOS OS BOTÕES */
-  align-self: center;
-  padding: 12px 26px;
-  background: #38bdf8;
-  color: #020617; /* TEXTO PRETO */
-  border-radius: 30px;
+  margin-top: auto;
+  width: 100%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 20px;
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #fff;
+
   font-weight: 600;
+  font-size: 0.95rem;
   text-decoration: none;
-  transition: transform 0.3s ease, background 0.3s ease;
+
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
 .card-btn:hover {
-  background: #0ea5e9;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px #0ea5e9;
 }
 
 
@@ -336,5 +354,24 @@ footer {
 
   .service-image {
     margin: 0 auto 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .card-btn {
+    font-size: 0.9rem;
+    padding: 14px;
   }
 }
